@@ -19,6 +19,7 @@ public class DrawPanel extends JPanel
 	private JButton squareButton;
 	private JButton polygonButton;
 	private JButton triangleButton;
+	private JButton ellipseButton;
 	private JScrollPane DrawPayne;
 	private Shapely shape;
 	private ArrayList<Rectangle> rectangleList;
@@ -57,6 +58,16 @@ public class DrawPanel extends JPanel
 
 	private void setupLayout() 
 	{
+		theLayout.putConstraint(SpringLayout.WEST, triangleButton, 10, SpringLayout.WEST, this);
+		theLayout.putConstraint(SpringLayout.SOUTH, triangleButton, -10, SpringLayout.SOUTH, this);
+		theLayout.putConstraint(SpringLayout.NORTH, rectangleButton, 0, SpringLayout.NORTH, triangleButton);
+		theLayout.putConstraint(SpringLayout.WEST, rectangleButton, 6, SpringLayout.EAST, triangleButton);
+		theLayout.putConstraint(SpringLayout.NORTH, circleButton, 0, SpringLayout.NORTH, triangleButton);
+		theLayout.putConstraint(SpringLayout.WEST, circleButton, 6, SpringLayout.EAST, rectangleButton);
+		theLayout.putConstraint(SpringLayout.NORTH, squareButton, 0, SpringLayout.NORTH, triangleButton);
+		theLayout.putConstraint(SpringLayout.WEST, squareButton, 6, SpringLayout.EAST, circleButton);
+		theLayout.putConstraint(SpringLayout.WEST, polygonButton, 0, SpringLayout.WEST, triangleButton);
+		theLayout.putConstraint(SpringLayout.SOUTH, polygonButton, -6, SpringLayout.NORTH, triangleButton);
 		
 	}
 
@@ -84,7 +95,7 @@ public class DrawPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent OnClick)
 			{
-				shape.addTriangle();
+				shape.addRectangle();
 				repaint();
 			}
 		});
@@ -93,7 +104,7 @@ public class DrawPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent OnClick)
 			{
-				shape.addTriangle();
+				shape.addCircle();
 				repaint();
 			}
 		});
@@ -102,16 +113,25 @@ public class DrawPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent OnClick)
 			{
-				shape.addTriangle();
+				shape.addSquare();
 				repaint();
 			}
 		});
 		
 		polygonButton.addActionListener(new ActionListener()
 		{
-			public void actionPerfomed(ActionEvent OnClick)
+			public void actionPerformed(ActionEvent OnClick)
 			{
 				shape.addPolygon();
+				repaint();
+			}
+		});
+		
+		ellipseButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent OnClick)
+			{
+				shape.addEllipse();
 				repaint();
 			}
 		});
