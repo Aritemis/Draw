@@ -33,8 +33,8 @@ public class Shapely extends JPanel
 	
 	public void addRectangle()
 	{
-		int xPosition = (int)(Math.random() * 600);
-		int yPosition = (int)(Math.random() * 600);
+		int xPosition = (int)(Math.random() * 750);
+		int yPosition = (int)(Math.random() * 750);
 		int width = (int)(Math.random() * 100);
 		int height = (int)(Math.random() * 100);
 		
@@ -43,8 +43,8 @@ public class Shapely extends JPanel
 	
 	public void addSquare()
 	{
-		int xPosition = (int)(Math.random() * 600);
-		int yPosition = (int)(Math.random() * 600);
+		int xPosition = (int)(Math.random() * 500);
+		int yPosition = (int)(Math.random() * 500);
 		int size = (int)(Math.random() * 100);
 		
 		squareList.add(new Rectangle(xPosition, yPosition, size, size));
@@ -52,8 +52,8 @@ public class Shapely extends JPanel
 	
 	public void addEllipse()
 	{
-		int xPosition = (int)(Math.random() * 600);
-		int yPosition = (int)(Math.random() * 600);
+		int xPosition = (int)(Math.random() * 500);
+		int yPosition = (int)(Math.random() * 500);
 		int width = (int)(Math.random() * 100);
 		int height = (int)(Math.random() * 100);
 		
@@ -64,8 +64,8 @@ public class Shapely extends JPanel
 	
 	public void addCircle()
 	{
-		int xPosition = (int)(Math.random() * 600);
-		int yPosition = (int)(Math.random() * 600);
+		int xPosition = (int)(Math.random() * 500);
+		int yPosition = (int)(Math.random() * 500);
 		int size = (int)(Math.random() * 100);
 		
 		Ellipse2D current = new Ellipse2D.Double(xPosition, yPosition, size, size);
@@ -77,8 +77,8 @@ public class Shapely extends JPanel
 		int[] xPoints = new int[3];
 		int[] yPoints = new int[3];
 		
-		xPoints = new int[] {(int)(Math.random() * 600), (int)(Math.random() * 600), (int)(Math.random() * 600)};
-		yPoints = new int[] {(int)(Math.random() * 600), (int)(Math.random() * 600), (int)(Math.random() * 600)};
+		xPoints = new int[] {(int)(Math.random() * 400), (int)(Math.random() * 400), (int)(Math.random() * 400)};
+		yPoints = new int[] {(int)(Math.random() * 400), (int)(Math.random() * 400), (int)(Math.random() * 400)};
 		
 		Polygon triangle = new Polygon(xPoints, yPoints, 3);
 		
@@ -93,8 +93,8 @@ public class Shapely extends JPanel
 		
 		for(int sides = 0; sides < numberOfSides; sides++)
 		{
-			xPoints[sides] = (int)(Math.random() * 600);
-			yPoints[sides] = (int)(Math.random() * 600);
+			xPoints[sides] = (int)(Math.random() * 500);
+			yPoints[sides] = (int)(Math.random() * 500);
 		}
 		
 		Polygon myPolygon = new Polygon(xPoints, yPoints, numberOfSides);
@@ -123,7 +123,8 @@ public class Shapely extends JPanel
 			int red = (int)(Math.random() * 256);
 			int blue = (int)(Math.random() * 256);
 			int green = (int)(Math.random() * 256);
-			mainGraphics.setColor(new Color(red, green, blue));
+			int alpha = (int)(Math.random() * 256);
+			mainGraphics.setColor(new Color(red, green, blue, alpha));
 			mainGraphics.setStroke(new BasicStroke(randomStroke));
 			mainGraphics.fill(current);
 		}
@@ -134,7 +135,8 @@ public class Shapely extends JPanel
 			int red = (int)(Math.random() * 256);
 			int blue = (int)(Math.random() * 256);
 			int green = (int)(Math.random() * 256);
-			mainGraphics.setColor(new Color(red, green, blue));
+			int alpha = (int)(Math.random() * 256);
+			mainGraphics.setColor(new Color(red, green, blue, alpha));
 			mainGraphics.setStroke(new BasicStroke(randomStroke));
 			mainGraphics.fill(current);
 		}
@@ -145,7 +147,8 @@ public class Shapely extends JPanel
 			int red = (int)(Math.random() * 256);
 			int blue = (int)(Math.random() * 256);
 			int green = (int)(Math.random() * 256);
-			mainGraphics.setColor(new Color(red, green, blue));
+			int alpha = (int)(Math.random() * 256);
+			mainGraphics.setColor(new Color(red, green, blue, alpha));
 			mainGraphics.setStroke(new BasicStroke(randomStroke));
 			mainGraphics.fill(current);
 		}
@@ -156,7 +159,8 @@ public class Shapely extends JPanel
 			int red = (int)(Math.random() * 256);
 			int blue = (int)(Math.random() * 256);
 			int green = (int)(Math.random() * 256);
-			mainGraphics.setColor(new Color(red, green, blue));
+			int alpha = (int)(Math.random() * 256);
+			mainGraphics.setColor(new Color(red, green, blue, alpha));
 			mainGraphics.setStroke(new BasicStroke(randomStroke));
 			mainGraphics.fill(current);
 		}
@@ -167,7 +171,8 @@ public class Shapely extends JPanel
 			int red = (int)(Math.random() * 256);
 			int blue = (int)(Math.random() * 256);
 			int green = (int)(Math.random() * 256);
-			mainGraphics.setColor(new Color(red, green, blue));
+			int alpha = (int)(Math.random() * 256);
+			mainGraphics.setColor(new Color(red, green, blue, alpha));
 			mainGraphics.setStroke(new BasicStroke(randomStroke));
 			mainGraphics.fill(current);
 		}
@@ -178,7 +183,8 @@ public class Shapely extends JPanel
 			int red = (int)(Math.random() * 256);
 			int blue = (int)(Math.random() * 256);
 			int green = (int)(Math.random() * 256);
-			mainGraphics.setColor(new Color(red, green, blue));
+			int alpha = (int)(Math.random() * 256);
+			mainGraphics.setColor(new Color(red, green, blue, alpha));
 			mainGraphics.setStroke(new BasicStroke(randomStroke));
 			mainGraphics.fill(current);
 		}

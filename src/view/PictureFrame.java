@@ -23,7 +23,7 @@ public class PictureFrame extends JFrame
 	public void setupFrame()
 	{
 		this.setContentPane(panel);
-		this.setSize(800, 800);
+		this.setSize(1500, 1000);
 		this.add(sculpt);
 		this.setVisible(true);
 	}
