@@ -32,25 +32,11 @@ public class DrawPanel extends JPanel
 		this.baseControl = baseControl;
 		this.shape = new Shapely();
 		this.theLayout = new SpringLayout();
-		theLayout.putConstraint(SpringLayout.WEST, shape, 25, SpringLayout.WEST, this);
-		theLayout.putConstraint(SpringLayout.EAST, shape, -25, SpringLayout.EAST, this);
 		this.triangleButton = new JButton("Triangle");
-		theLayout.putConstraint(SpringLayout.NORTH, triangleButton, 15, SpringLayout.NORTH, this);
-		theLayout.putConstraint(SpringLayout.NORTH, shape, 6, SpringLayout.SOUTH, triangleButton);
-		theLayout.putConstraint(SpringLayout.EAST, triangleButton, -179, SpringLayout.EAST, this);
 		this.rectangleButton = new JButton("Rectangle");
 		this.clearButton = new JButton("Clear");
-		theLayout.putConstraint(SpringLayout.SOUTH, shape, -8, SpringLayout.NORTH, clearButton);
-		theLayout.putConstraint(SpringLayout.WEST, clearButton, 25, SpringLayout.WEST, this);
-		theLayout.putConstraint(SpringLayout.SOUTH, clearButton, -10, SpringLayout.SOUTH, this);
-		clearButton.setBackground(Color.LIGHT_GRAY);
-		clearButton.setForeground(Color.BLACK);
 		this.circleButton = new JButton("Circle");
 		this.squareButton = new JButton("Square");
-		theLayout.putConstraint(SpringLayout.WEST, circleButton, 5, SpringLayout.EAST, squareButton);
-		theLayout.putConstraint(SpringLayout.SOUTH, circleButton, 0, SpringLayout.SOUTH, squareButton);
-		theLayout.putConstraint(SpringLayout.WEST, squareButton, 5, SpringLayout.EAST, rectangleButton);
-		theLayout.putConstraint(SpringLayout.SOUTH, squareButton, 0, SpringLayout.SOUTH, rectangleButton);
 		this.ellipseButton = new JButton("Ellipse");
 		theLayout.putConstraint(SpringLayout.WEST, ellipseButton, 5, SpringLayout.EAST, triangleButton);
 		theLayout.putConstraint(SpringLayout.SOUTH, ellipseButton, 0, SpringLayout.SOUTH, triangleButton);
@@ -82,7 +68,20 @@ public class DrawPanel extends JPanel
 
 	private void setupLayout() 
 	{
-		
+		theLayout.putConstraint(SpringLayout.WEST, shape, 25, SpringLayout.WEST, this);
+		theLayout.putConstraint(SpringLayout.EAST, shape, -25, SpringLayout.EAST, this);
+		theLayout.putConstraint(SpringLayout.NORTH, triangleButton, 15, SpringLayout.NORTH, this);
+		theLayout.putConstraint(SpringLayout.NORTH, shape, 6, SpringLayout.SOUTH, triangleButton);
+		theLayout.putConstraint(SpringLayout.EAST, triangleButton, -179, SpringLayout.EAST, this);
+		theLayout.putConstraint(SpringLayout.SOUTH, shape, -8, SpringLayout.NORTH, clearButton);
+		theLayout.putConstraint(SpringLayout.WEST, clearButton, 25, SpringLayout.WEST, this);
+		theLayout.putConstraint(SpringLayout.SOUTH, clearButton, -10, SpringLayout.SOUTH, this);
+		clearButton.setBackground(Color.LIGHT_GRAY);
+		clearButton.setForeground(Color.BLACK);
+		theLayout.putConstraint(SpringLayout.WEST, circleButton, 5, SpringLayout.EAST, squareButton);
+		theLayout.putConstraint(SpringLayout.SOUTH, circleButton, 0, SpringLayout.SOUTH, squareButton);
+		theLayout.putConstraint(SpringLayout.WEST, squareButton, 5, SpringLayout.EAST, rectangleButton);
+		theLayout.putConstraint(SpringLayout.SOUTH, squareButton, 0, SpringLayout.SOUTH, rectangleButton);
 	}
 
 	private void setupListeners() 
